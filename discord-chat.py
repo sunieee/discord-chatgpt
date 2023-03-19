@@ -382,4 +382,4 @@ async def set_user(interaction: discord.Interaction, system_msg: str=''):
     await interaction.response.send_message(user.strfy(), view=UserView(user), ephemeral=True)
 
 
-client.run(os.getenv("DISCORD_TOKEN"), bot=True)
+client.run(os.getenv("DISCORD_TOKEN"))
