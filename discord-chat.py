@@ -31,6 +31,7 @@ def init_client(proxy):
 
 client = init_client(os.getenv('http_proxy'))
 tree = app_commands.CommandTree(client)
+# MY_GUILD = discord.Object(id=1054244324939931668)
 MY_GUILD = None
 
 # 启动mysql连接，到本地sqlite数据库
@@ -185,6 +186,8 @@ async def on_message(message: discord.Message):
     user = get_user(message.author)
     if user.status == 'disable':
         return
+    
+    print(message.content)
 
     if user.status == 'new':
         is_private = isinstance(message.channel, discord.channel.DMChannel)
@@ -203,26 +206,19 @@ async def on_message(message: discord.Message):
     await message.remove_reaction('✍🏻', client.user)
     await message.add_reaction('👌')
 
-
-async def get_session(interaction: discord.Interaction):
+@tree.command(name = "session", description = "reset current session", guild=MY_GUILD) #Add the guild ids in which the slash command will appear. If it should be in all, remove the argument, but note that it will take some time (up to an hour) to register the command if it's for all guilds.
+async def set_session(interaction: discord.Interaction, name:str='', system_msg:str=''):
     await interaction.response.defer()
     user = get_user(interaction.user)
     if user.status != 'activate':
         await interaction.followup.send(failed_str + 'You are not activating any session!')
         return
     
-    session = db_session.query(Session).filter_by(id=user.current_session_id)
+    session = db_session.query(Session).filter_by(id=user.current_session_id).first()
     if session.creator != user:
         await interaction.followup.send(f'{failed_str}This is a private session created by {session.creator.name}.')
         return
-    return session
-
-
-@tree.command(name = "session", description = "reset current session", guild=MY_GUILD) #Add the guild ids in which the slash command will appear. If it should be in all, remove the argument, but note that it will take some time (up to an hour) to register the command if it's for all guilds.
-async def set_session(interaction: discord.Interaction, name:str='', system_msg:str=''):
-    session = await get_session(interaction)
-    if not session:
-        return
+    
     if name or system_msg:
         session.name = name
         session.system_msg = system_msg
@@ -355,7 +351,7 @@ class UserView(View):
             else:
                 self.user.status = 'activate'
                 self.user.current_session_id = button.id
-                session = db_session.query(Session).filter_by(id=button.id)
+                session = db_session.query(Session).filter_by(id=button.id).first()
                 msg = 'successfully change session!\n' + session.strfy()
             
         else:
