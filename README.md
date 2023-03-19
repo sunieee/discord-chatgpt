@@ -1,4 +1,4 @@
-# discord开发
+# Discord-bot (multi-user, multi-session) for chatGPT
 
 关键的概念是user和session，对应着用户和会话
 
@@ -122,5 +122,21 @@ chatAPI：https://platform.openai.com/docs/guides/chat/introduction
 > Discord token: MTA4NzAyNDE5OTYyMjcyMTcyOA.GdxKj5.PdcAnH7mLAzzTO27uWhqNyPcLIiXwoq6ibSiRg
 
 
+## 样例
+
+### 问答模式
 
 ![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=N2ZhMjk1ZTE0OGQzYzFkNmU4ZTJkZGVjMjM1NDU4OTVfVVdIdnUwNDhmUXE2aXVjc0JPdk11T2pEd1BFM05rT3hfVG9rZW46Ym94Y25sb0pLeTgxSVRUaDd4M2J0WWtCTjllXzE2NzkyMzg2NzM6MTY3OTI0MjI3M19WNA)
+
+### /user
+
+![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=MTdlNTcyMDY3MjA3NWY3MGE2Njg1NjliNTRmNDQ2NDJfTDVWZDVZZ205QzAxdlQxTG0xRGVvUlNsazExc2ZZUGhfVG9rZW46Ym94Y25meXdwNTJaU0dNa2pxOWRZUDRaTHhoXzE2NzkyNDE5NDY6MTY3OTI0NTU0Nl9WNA)
+
+### /session
+
+![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=NWRlYmVlYjBjZGIwM2NkNzZkN2UwNDJlZTIzNDg5MTdfMVlVUUpCUEVocmVZMldjWEw5ZGJIbmtoZzdVRWRLQXdfVG9rZW46Ym94Y25zUGhuaDNkR0c4U2tSb3JLTldkc2RnXzE2NzkyNDE5NDY6MTY3OTI0NTU0Nl9WNA)
+
+### 生成过程
+生成过程和解释会添加reaction，使用不同的emoji✍🏻与👌分别表示“正在生成”与“生成完成”
+
+![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmI1ZDc2NDA4ODg4MmM0MDI5NzI0NzY0NmY4NTMwMzBfR0VGUTNSWHNTcThrVWcxcWtYWWhlWVdqZ1lhcG5qYzNfVG9rZW46Ym94Y24xMGZFWjhVTUFYSXhWbnhSSjJEaUVnXzE2NzkyNDE5NTk6MTY3OTI0NTU1OV9WNA)
