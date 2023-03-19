@@ -1,5 +1,7 @@
 # Discord-bot (multi-user, multi-session) for chatGPT
 
+discord Server invite link: https://discord.gg/sp9pbhRjAg
+
 关键的概念是user和session，对应着用户和会话
 
 - 首先discord中每个用户（user）对应chatGPT的用户，相应数据存储在user数据表中
