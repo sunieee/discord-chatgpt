@@ -31,7 +31,8 @@ discord Server invite link: https://discord.gg/sp9pbhRjAg
 输入参数：
 
 - system_msg：默认会话设定（仅在gpt3.5以上模型中有效）
-- max_token：最大单次询问token数量（默认为500）
+- max_token：最大单次询问最大总token数量（默认为600token，约为450词）
+- temperature：0~1，更高的temperature能够给出更加随机的答案（默认为0.8）
 
 输出内容：
 
