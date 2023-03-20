@@ -14,9 +14,9 @@ discord Server invite link: https://discord.gg/sp9pbhRjAg
 
 使用sqlite存储信息到本地，包含session和user两个表格：
 
-**user表：**包括以下信息：name + discod_user_id + 时间（create, update指最晚对话时间, modify指最晚信息修改时间）+ status + model + current_session + system_msg
+**user表：** 包括以下信息：name + discod_user_id + 时间（create, update指最晚对话时间, modify指最晚信息修改时间）+ status + model + current_session + system_msg
 
-**session表：**包括以下信息：创建者 + 模型 + 标题 + 时间（create, update指最晚对话时间, modify指最晚信息修改时间）+ 是否公开 + 序列化对话数据（保存每句话的身份）+ system_msg
+**session表：** 包括以下信息：创建者 + 模型 + 标题 + 时间（create, update指最晚对话时间, modify指最晚信息修改时间）+ 是否公开 + 序列化对话数据（保存每句话的身份）+ system_msg
 
 ## 斜杠命令
 
