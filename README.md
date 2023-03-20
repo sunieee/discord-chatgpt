@@ -95,50 +95,31 @@ OpenAI API 由具有不同功能和价位的多种模型提供支持。[您还�
 
 价格：https://openai.com/pricing
 
-![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=NTI3OTVkY2UwYWQyZTczMmY5NTUyNjQyNTg3MDEwNjNfRWwzNkViYVFqRk9QT1NhVFNJM2ZobFZEbVNmZEs5c2hfVG9rZW46Ym94Y25tN3owVzN2Qml2OXdJWjdkYzNhY1ZiXzE2NzkyMzg2NzM6MTY3OTI0MjI3M19WNA)
+![image](https://user-images.githubusercontent.com/42105752/226223978-36559bc5-37fd-458a-bb77-834a546eea37.png)
 
 chatAPI：https://platform.openai.com/docs/guides/chat/introduction
 
 ## 消息命令
 
-为了避免遗忘历史信息，提供对机器人消息的消息命令，私发有关session的所有环境信息
-
-> Plus账号信息：
->
-> liubx07@gmail.com sensetime
->
-> API key: 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
->
-> Organization id: org-LQ0zTSTQKSxRHoDfiU3cLmtw
->
-> I'd like to build a discord chat bot, especially integrate it with "Visual ChatGPT", which can help us interpret photos or generate photos highly interactively.
->
-> 账号：latavislgvjuyp@gmail.com
->
-> 密码：SSss77&&
->
-> api_key：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
->
-> Org ID: org-MrioZE7Irj32h0rnPjrFxAQa
->
-> Discord token: MTA4NzAyNDE5OTYyMjcyMTcyOA.GdxKj5.PdcAnH7mLAzzTO27uWhqNyPcLIiXwoq6ibSiRg
-
+为了避免遗忘历史信息，提供对机器人消息的消息命令，私发有关session的所有环境信息（待开发）
 
 ## 样例
 
 ### 问答模式
 
-![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=N2ZhMjk1ZTE0OGQzYzFkNmU4ZTJkZGVjMjM1NDU4OTVfVVdIdnUwNDhmUXE2aXVjc0JPdk11T2pEd1BFM05rT3hfVG9rZW46Ym94Y25sb0pLeTgxSVRUaDd4M2J0WWtCTjllXzE2NzkyMzg2NzM6MTY3OTI0MjI3M19WNA)
+在用户状态为new，或者activate状态下，发送的消息均会被chatbot应答：
+
+![image](https://user-images.githubusercontent.com/42105752/226224063-d4a7bc3e-5ff3-45ae-9fc4-2f6b659effa4.png)
 
 ### /user
 
-![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=MTdlNTcyMDY3MjA3NWY3MGE2Njg1NjliNTRmNDQ2NDJfTDVWZDVZZ205QzAxdlQxTG0xRGVvUlNsazExc2ZZUGhfVG9rZW46Ym94Y25meXdwNTJaU0dNa2pxOWRZUDRaTHhoXzE2NzkyNDE5NDY6MTY3OTI0NTU0Nl9WNA)
+![image](https://user-images.githubusercontent.com/42105752/226224391-7cbebf3f-e43c-4b84-a26f-f3c0a28a89a9.png)
 
 ### /session
 
-![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=NWRlYmVlYjBjZGIwM2NkNzZkN2UwNDJlZTIzNDg5MTdfMVlVUUpCUEVocmVZMldjWEw5ZGJIbmtoZzdVRWRLQXdfVG9rZW46Ym94Y25zUGhuaDNkR0c4U2tSb3JLTldkc2RnXzE2NzkyNDE5NDY6MTY3OTI0NTU0Nl9WNA)
+![image](https://user-images.githubusercontent.com/42105752/226224531-68c07199-d1bc-4026-921d-ab39ab960d58.png)
 
 ### 生成过程
 生成过程和解释会添加reaction，使用不同的emoji✍🏻与👌分别表示“正在生成”与“生成完成”
 
-![img](https://act-visual.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmI1ZDc2NDA4ODg4MmM0MDI5NzI0NzY0NmY4NTMwMzBfR0VGUTNSWHNTcThrVWcxcWtYWWhlWVdqZ1lhcG5qYzNfVG9rZW46Ym94Y24xMGZFWjhVTUFYSXhWbnhSSjJEaUVnXzE2NzkyNDE5NTk6MTY3OTI0NTU1OV9WNA)
+![image](https://user-images.githubusercontent.com/42105752/226224635-f21ba363-6812-4c9c-96bc-fdbfd8105689.png)
