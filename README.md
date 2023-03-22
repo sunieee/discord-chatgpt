@@ -2,10 +2,10 @@
 
 discord Server invite link: https://discord.gg/sp9pbhRjAg
 
-The key concepts are user and session, corresponding to users and sessions
+The key concepts are **user** and **session**
 
-- First, each user (user) in discord corresponds to a chatGPT user, and the corresponding data is stored in the user data table
-- Each user can create multiple sessions (session), and can manage the session created by himself
+- First, each **user** in discord corresponds to a chatGPT user, and the corresponding data is stored in the user data table
+- Each user can create multiple **sessions**, and can manage the session created by himself
 - Users can have conversations using their own sessions or public sessions
   - If the session is created on a public channel, the session is initialized as public (anyone can ask questions)
   - If the session is created in DM, then the session is initialized as private, even in a public conversation, others cannot ask questions (unless the creator modifies the permissions)
@@ -14,7 +14,7 @@ The key concepts are user and session, corresponding to users and sessions
 
 Use sqlite to store information locally, including two tables of session and user:
 
-**user table:** includes the following information: name + discod_user_id + time (create, update refers to the latest dialogue time, modify refers to the latest information modification time) + status + model + current_session + system_msg
+**user table:** includes the following information: name + discod_user_id + time (create, update refers to the latest dialogue time, modify refers to the latest information modification time) + status + model + current_session + system_msg  + public or not
 
 **Session table:** includes the following information: creator + model + title + time (create, update refers to the latest dialogue time, modify refers to the latest information modification time) + public or not + serialized dialogue data (save the identity of each sentence) + system_msg
 
@@ -34,7 +34,7 @@ Input parameters:
 - max_token: the maximum total number of tokens for a single inquiry (the default is 600 tokens, about 450 words)
 - temperature: 0~1, higher temperature can give more random answers (default is 0.8)
 
-output:
+Output Content:
 
 - Name (Discord id)
 - Create time
@@ -43,7 +43,7 @@ output:
 - System message
 - Sessions
 
-button:
+Button:
 
 - **Show public** : Whether to show public conversations, otherwise only show the ones created by yourself, switch from yes to no, or from no to yes (default is False)
 - **attach** : Whether to enter the session context by default after creating a session, otherwise the user status will always be new (default is False)
@@ -59,7 +59,7 @@ Input parameters:
 - name: Rename the current session (the first 10 characters created by default)
 - system_msg: session settings
 
-output:
+Output Content:
 
 - Creator
 - Name
@@ -69,7 +69,7 @@ output:
 - System message
 - Conversation
 
-button:
+Button:
 
 - **public** : whether the session is public and only the session creator can modify it
 - **model** : the model used by the session (only valid for subsequent dialogues of the session)
@@ -90,7 +90,7 @@ The OpenAI API is powered by a variety of models with different capabilities and
 | [M](https://platform.openai.com/docs/models/moderation)oderation | A fine-tuned model that can detect whether text is sensitive or insecure |
 | [GPT-3](https://platform.openai.com/docs/models/gpt-3)       | A set of models that can understand and generate natural language |
 
-Representative models: gpt-4, [gpt-3.5-turbo](https://platform.openai.com/docs/models) , text-davinci-003
+Representative models: gpt-4 (need to apply), gpt-3.5-turbo, text-davinci-003
 
 While the new `gpt-3.5-turbo`model is optimized for chatting, it's perfectly suited for traditional completion tasks. The original GPT-3.5 model is optimized for [text completion . ](https://platform.openai.com/docs/guides/completion)Open source models have also been released, including [Point-E](https://github.com/openai/point-e) , [Whisper](https://github.com/openai/whisper) , [Jukebox](https://github.com/openai/jukebox) , and [CLIP](https://github.com/openai/CLIP) .
 
